@@ -26,7 +26,7 @@ You may:
 
 This project is for educational purposes and does not reproduce any copyrighted content from Boyer & Merzbach’s textbook.
 
-## 🜏 Ritual Note
+## Note
 
 > This project is not merely a commentary — it is a reclaiming of the intellectual arc of mathematics  
 > from its tribal sparks to its formalist fire. Enter with intention. Archive with care.
