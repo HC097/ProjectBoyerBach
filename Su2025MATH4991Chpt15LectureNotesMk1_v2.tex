@@ -1,0 +1,610 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 15 – Analysis, Synthesis, the Infinite, and Numbers} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\section*{I. Cultural Invocation}
+
+\begin{itemize}
+  \item \textbf{Civilization:} Seventeenth-Century Western Europe
+  \item \textbf{Time Period:} c. 1630--1670
+  \item \textbf{Figures:} Galileo Galilei, Bonaventura Cavalieri, Evangelista Torricelli, René Descartes, Pierre de Fermat, Blaise Pascal, Christiaan Huygens
+\end{itemize}
+
+Mathematics crossed a threshold — from mechanical calculation to conceptual reckoning.\\
+
+The tools of Kepler and Stevin gave way to infinitesimals, analytic planes, and questions that pierced metaphysical veils:\\
+
+\emph{What is a curve? What is the infinite? Can a part be equal to the whole?}\\
+
+This was an age of paradox, of thresholds, of men who saw the future through the infinitesimal eye.\\
+
+\begin{center}
+    \includegraphics[scale=.25]{cover1.png}
+    
+    \textit{Europe, 1648}
+\end{center}
+
+\newpage
+
+\section*{II. Faces of the Era}
+
+\subsection*{Galileo Galilei (1564–1642)}
+\begin{itemize}
+  \item Articulated projectile motion via parabolic decomposition.
+  \item Touched the infinite through physics, not abstraction.
+  \item Misidentified the catenary — but intuited infinitesimal higher orders.
+\end{itemize}
+
+\subsection*{Bonaventura Cavalieri (1598–1647)}
+\begin{itemize}
+  \item Formalized the method of indivisibles; proto-integral reasoning.
+  \item Asserted that lines compose area, areas compose volume — atomic geometry.
+  \item Proposed Cavalieri’s Principle (area/volume equivalence via sections).
+\end{itemize}
+
+\subsection*{Evangelista Torricelli (1608–1647)}
+\begin{itemize}
+  \item Extended Cavalieri’s indivisibles to tangents, arcs, and spirals.
+  \item Proved infinite area can generate finite volume (Gabriel’s Horn).
+  \item Sketched early logarithmic graphs.
+\end{itemize}
+
+\subsection*{René Descartes (1596–1650)}
+\begin{itemize}
+  \item Created analytic geometry: number fused with shape.
+  \item Saw equations as curves, curves as equations.
+  \item Rejected mechanical (non-algebraic) curves as ``inexact.''
+\end{itemize}
+
+\subsection*{Pierre de Fermat (1601–1665)}
+\begin{itemize}
+  \item Discovered methods of maxima, minima, and tangents — early differential reasoning.
+  \item Operated through symbolic induction and infinite descent.
+  \item Knew the fundamental theorem of calculus in all but name.
+\end{itemize}
+
+\subsection*{Blaise Pascal (1623–1662)}
+\begin{itemize}
+  \item Crafted Pascal’s Hexagon Theorem and the logic of infinity.
+  \item Proved tangents to conics geometrically.
+  \item Nearly discovered integration from the cycloid.
+\end{itemize}
+
+\subsection*{Christiaan Huygens (1629–1695)}
+\begin{itemize}
+  \item Defined involutes and evolutes, curvature and radius.
+  \item Made the cycloid a tautochrone; found its arc length.
+  \item Reconciled time, geometry, and motion.
+\end{itemize}
+
+\subsection*{Gilles de Roberval (1602–1675)}
+\begin{itemize}
+  \item Developed method of tangents via decomposition of motion.
+  \item Analyzed curves like the cycloid without algebraic coordinates.
+  \item Precursor to vector-based reasoning in kinematics and geometry.
+\end{itemize}
+
+\subsection*{Philippe de La Hire (1640–1718)}
+\begin{itemize}
+  \item Extended Descartes' coordinate approach into three dimensions.
+  \item Constructed surfaces using equations in three variables.
+  \item Provided a geometric bridge from conics to analytic solids.
+\end{itemize}
+
+\subsection*{Girard Desargues (1591–1661)}
+\begin{itemize}
+  \item Founded projective geometry; introduced poles, polars, and perspectivity.
+  \item Showed how conic sections could be unified under projection.
+  \item His ideas were rediscovered and canonized by Pascal and La Hire.
+\end{itemize}
+
+\subsection*{Marin Mersenne (1588–1648)}
+\begin{itemize}
+  \item Central figure in the European mathematical network — the “Mersenne Circle.”
+  \item Facilitated correspondence between Descartes, Fermat, Roberval, Torricelli, and others.
+  \item Issued mathematical challenges that catalyzed key developments in tangents and quadrature.
+  \item Though not a creator of theorems, he served as the intellectual hub of the era’s mathematical ferment.
+\end{itemize}
+
+\subsection*{Jean de Beaugrand (1584–1640)}
+\begin{itemize}
+  \item Advocate of Desargues’ geometry and one of its earliest public defenders.
+  \item Known more for polemics and commentary than for original theory.
+  \item His writings served to publicize projective approaches in an era of skepticism.
+\end{itemize}
+
+\subsection*{Frans van Schooten (1615–1660)}
+\begin{itemize}
+  \item Editor and disseminator of Descartes’ \textit{La Géométrie}.
+  \item His annotated Latin editions made Cartesian geometry widely accessible.
+  \item Trained a generation of Dutch mathematicians who carried analytic methods forward.
+\end{itemize}
+
+\subsection*{Johann Hudde (1628–1704)}
+\begin{itemize}
+  \item Developed algebraic techniques for finding maxima and minima.
+  \item Independently discovered methods parallel to Fermat’s tangents.
+  \item Influenced Newton through his correspondence and algebraic manuscripts.
+\end{itemize}
+
+\subsection*{René-François de Sluse (1622–1685)}
+\begin{itemize}
+  \item Created general rules for tangents to polynomial curves.
+  \item His formulas anticipated the derivative concept in symbolic form.
+  \item Corresponded with Barrow and Newton, forming a bridge between eras.
+\end{itemize}
+
+\subsection*{Isaac Barrow (1630–1677)}
+\begin{itemize}
+  \item Newton’s teacher and the first to clearly state the inverse relation of differentiation and integration.
+  \item Developed a rigorous geometric approach to infinitesimal methods.
+  \item Stood at the edge of full calculus, shaping its final conceptual form.
+\end{itemize}
+
+\newpage
+
+\section*{III. Works of the Era}
+
+\subsection*{Galileo Galilei — \textit{Dialogo sopra i due massimi sistemi del mondo} (1632)}
+\begin{itemize}
+  \item Framed dynamics through geometric thought, using infinitesimal comparisons.
+  \item Argued for higher-order infinitesimals in projectile motion.
+  \item Initiated discussions on one-to-one correspondences in infinite sets.
+\end{itemize}
+
+\subsection*{Bonaventura Cavalieri — \textit{Geometria indivisibilibus continuorum nova quadam ratione promota} (1635)}
+\begin{itemize}
+  \item Developed the method of indivisibles: lines as area, areas as volume.
+  \item Proposed Cavalieri’s Theorem: solids with equal cross-sectional areas have equal volumes.
+  \item Prefigured integral formulas: \(\int_0^a x^n dx = \frac{a^{n+1}}{n+1}\) (rhetorically, geometrically).
+\end{itemize}
+
+\subsection*{Evangelista Torricelli — \textit{De Dimensione Parabolae} (1644)}
+\begin{itemize}
+  \item Applied indivisibles to parabolas, cycloids, and tangents.
+  \item Provided early quadrature of the cycloid, both via exhaustion and indivisibles.
+  \item Demonstrated finite volume from infinite area (solid of revolution of a hyperbola).
+\end{itemize}
+
+\subsection*{René Descartes — \textit{La Géométrie} (1637)}
+\begin{itemize}
+  \item Founded analytic geometry; fused algebra and Euclidean construction.
+  \item Introduced coordinate-based classification of curves via polynomial degree.
+  \item Rejected non-algebraic (``mechanical'') curves — privileging exact constructibility.
+\end{itemize}
+
+\subsection*{Pierre de Fermat — \textit{Methodus ad disquirendam maximam et minimam} (posth. 1679)}
+\begin{itemize}
+  \item Used difference quotients to find extrema and tangents — an early differential method.
+  \item Discovered rules equivalent to the power rule in calculus.
+  \item Introduced coordinate analysis of loci and symbolic recursion (``infinite descent'').
+\end{itemize}
+
+\subsection*{Blaise Pascal — \textit{Lettres de A. Dettonville} (1658–59), \textit{Traité du triangle arithmétique} (1665)}
+\begin{itemize}
+  \item Solved arc length, area, and center of gravity problems for the cycloid.
+  \item Formalized binomial expansions and recursive triangle logic.
+  \item Unified combinatorics and geometry under principles of symmetry and infinity.
+\end{itemize}
+
+\subsection*{Christiaan Huygens — \textit{Horologium Oscillatorium} (1673)}
+\begin{itemize}
+  \item Defined curvature, radius of curvature, and evolutes/involutes.
+  \item Proved the cycloid to be a tautochrone and rectified its arc.
+  \item Combined infinitesimal reasoning with mechanical applications (pendulum design).
+\end{itemize}
+
+\subsection*{Philippe de La Hire — \textit{Nouveaux Éléments des Sections Coniques} (1679)}
+\begin{itemize}
+  \item Extended projective geometry and conic analysis with algebraic tools.
+  \item Introduced one of the first analytic surface equations in three variables.
+  \item Bridged classical conic theory with the emerging methods of coordinate geometry.
+\end{itemize}
+
+\subsection*{Isaac Barrow — \textit{Lectiones Mathematicae} (1670), \textit{Geometrical Lectures} (1674)}
+\begin{itemize}
+  \item Provided a geometric foundation for calculus through the inverse relation of integration and differentiation.
+  \item Developed rigorous tangent and area constructions without limits.
+  \item His lectures deeply influenced Newton and formed a conceptual bridge from geometry to calculus.
+\end{itemize}
+
+
+\newpage
+
+\section*{IV. Historical Overview}
+
+The mid-seventeenth century was an age of conceptual upheaval. Tools became theory. Curves became equations. Infinity became a topic not of awe, but of action. The thinkers of this era stood at the boundary between geometry and analysis, between static magnitude and dynamic form.
+
+\subsection*{1. Indivisibles Supersede Exhaustion}
+\begin{itemize}
+  \item Classical geometry favored the method of exhaustion — rigorous but limited.
+  \item Cavalieri introduced indivisibles: treating area as composed of line elements, volume as composed of planes.
+  \item The result was a functional shift — from finite approximations to infinitesimal decompositions.
+\end{itemize}
+
+\subsection*{2. Geometry Enters Algebraic Space}
+\begin{itemize}
+  \item Descartes transformed curves into equations, and equations into spatial loci.
+  \item Problems of ancient construction were now solvable by polynomial classification.
+  \item Coordinates became the grammar through which geometry spoke algebra.
+  \item Descartes revolutionized geometry by treating curves as algebraic equations.
+  \item However, early use of coordinates was partial: many diagrams and solutions avoided negative values.
+  \item The full implications of the Cartesian plane — with both axes extending in both directions — took time to manifest in practice.
+  \item Graphs remained quadrant-bound; symmetry and signed distances were not yet universally accepted.
+\end{itemize}
+
+\subsection*{3. Tangents, Maxima, and the Rise of the Differential}
+\begin{itemize}
+  \item Fermat devised methods to find tangents and extrema via symbolic perturbation.
+  \item These foreshadowed derivatives — limits without formal limit theory.
+  \item Hudde and Sluse added procedural rules; tangents became calculable objects.
+\end{itemize}
+
+\subsection*{4. The Infinite Begins to Fragment}
+\begin{itemize}
+  \item Galileo confronted paradox: as many squares as natural numbers — yet fewer?
+  \item Pascal and Cavalieri spoke of infinite sums, but with rhetorical caution.
+  \item Huygens, Torricelli, and others handled infinite curves and volumes pragmatically, if not formally.
+\end{itemize}
+
+\subsection*{5. Integration Emerges Without Name}
+\begin{itemize}
+  \item Cycloids, parabolas, spirals — all invited new quadratures.
+  \item Torricelli used indivisibles and geometry to find volumes from infinitesimal arcs.
+  \item Pascal and Fermat each touched the essence of integration — summation over continuous form.
+\end{itemize}
+
+\subsection*{6. The Center of Gravity Shifts}
+\begin{itemize}
+  \item The early seventeenth century belonged to France — Descartes, Pascal, and Roberval stood at the mathematical vanguard.
+  \item But by the 1670s, the French dominance had waned. Pascal was dead, Roberval’s methods unformalized, and Descartes' metaphysics had outpaced his math.
+  \item The Netherlands rose in their place: van Schooten published annotated editions of Descartes, Hudde extended Fermat’s methods, and Huygens combined geometry with mechanics.
+  \item In England, Barrow began a geometric calculus; his student Newton would soon synthesize it all.
+  \item Even as Cartesian rationalism held court in salons and pulpits, the actual center of mathematical innovation was moving — from Paris to Leiden, from Port-Royal to Cambridge.
+    \item The Dutch intellectual network centered around Leyden — van Schooten’s editions, Hudde’s algebra, and Huygens’ geometry defined its peak.
+  \item But the \textit{Rampjaar} of 1672 shattered this center. With the death of de Witt and political instability, Leyden’s mathematical community declined.
+  \item In its place rose the Royal Society of London — founded in 1660, chartered in 1662.
+  \item Where Leyden thrived on correspondence and Cartesian rationalism, the Royal Society privileged experiment, publication, and mechanical philosophy.
+  \item The institutional gravity had shifted — and with it, the next chapter of mathematics would be written in Cambridge.
+\end{itemize}
+
+
+\newpage
+
+\section*{V. Problem--Solution Cycle}
+
+\subsection*{Problem 1: Galileo’s Higher-Order Infinitesimal (c. 1632)}
+\textbf{Statement.} Show how an object on a rotating Earth remains attached to the surface despite tangential motion. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Consider a small arc swept by Earth’s rotation through angle \( \theta \).
+  \item Tangential motion is represented by segment \( PQ \); vertical fall by segment \( PS \).
+  \item Galileo argues that \( PS \) is an infinitesimal of higher order than \( PQ \).
+  \item Hence, even a minuscule gravitational tendency is sufficient to retain surface contact.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt1.png} \\
+\textbf{FIG. 15.1:} Galileo’s infinitesimal motion argument.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 2: Cavalieri’s Equal Area via Indivisibles (c. 1635)}
+\textbf{Statement.} Prove that two triangles within a parallelogram are equal in area using indivisibles. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Divide the parallelogram \( AFDC \) into triangles via diagonal \( CF \).
+  \item Use horizontal line segments \( BM \) and \( HE \) at equal heights.
+  \item One-to-one correspondence of line segments shows the triangles are area-equal.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{15pt2.png} \\
+\textbf{FIG. 15.2:} Cavalieri’s triangle equivalence by indivisibles.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 3: Transforming a Parabola into a Spiral (c. 1635)}
+\textbf{Statement.} Map the parabola \( x^2 = ay \) onto an Archimedean spiral using polar transformation. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Consider ordinates of the parabola as radial segments from fixed point \( O \).
+  \item Twist the curve into spiral form via \( x = r, y = r\theta \).
+  \item Resulting curve: \( r = a\theta \), showing equivalence of area via polar geometry.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt3.png} \\
+\textbf{FIG. 15.3:} Cavalieri’s spiral-parabola transformation.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 4: Solving a Quadratic via Circle Construction (c. 1637)}
+\textbf{Statement.} Solve \( z^2 = az + b^2 \) geometrically, without algebra. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Draw segment \( LM = b \), construct perpendicular \( NL = a/2 \).
+  \item Form a circle centered at \( N \) with radius \( a/2 \).
+  \item The line \( MN \) intersects the circle at point \( O \); then \( OM = z \).
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt4.png} \\
+\textbf{FIG. 15.4:} Descartes’ geometric root extraction.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 5: The Cartesian Trident from Pappus (c. 1637)}
+\textbf{Statement.} Derive a cubic locus from five lines using Pappus’ proportionality rule. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Four vertical lines evenly spaced at intervals \( a \), plus one horizontal line.
+  \item Use point \( P \) such that the product of distances satisfies the relation:
+  \[
+    (a + x)(a - x)(2a - x) = axy
+  \]
+  \item Result is the cubic curve known as the “Cartesian trident” or “parabola of Newton.”
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{15pt5.png} \\
+\textbf{FIG. 15.5:} Construction of a Pappus cubic curve.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 6: Spiral Length by Tangent Rectification (Torricelli, c. 1644)}
+\textbf{Statement.} Rectify the arc of a logarithmic spiral using elementary geometry. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Construct a logarithmic spiral centered at \( O \) with point \( P \) on the spiral.
+  \item Draw the tangent line \( PT \) at point \( P \).
+  \item Torricelli showed that the total arc length from \( \theta = 0 \) to \( P \) equals the fixed segment \( PT \).
+  \item This marks one of the first exact rectifications of a transcendental curve.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt6.png} \\
+\textbf{FIG. 15.6:} Rectifying the logarithmic spiral.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 7: Tangent to a Curve via Indirect Differencing (Fermat, c. 1630s)}
+\textbf{Statement.} Find the tangent to a curve \( y = f(x) \) without using calculus. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Choose a point \( P \) on the curve and nearby point \( P' \) at \( x + E \).
+  \item Compute \( \frac{f(x+E) - f(x)}{E} \) and set \( E = 0 \).
+  \item Subtangent \( TQ = c \) is determined by similar triangles.
+  \item The process anticipates the derivative by analyzing limiting slopes.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{15pt7.png} \\
+\textbf{FIG. 15.7:} Fermat’s tangent method using small increments.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 8: Quadrature of Power Functions (Fermat, c. 1630s)}
+\textbf{Statement.} Determine the area under the curve \( y = x^n \) using geometric summation. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Subdivide the interval from \( x = 0 \) to \( x = a \) into exponentially spaced rectangles.
+  \item Approximate the area with a geometric series of rectangle areas.
+  \item Letting the spacing ratio tend to 1 yields:
+  \[
+    \int_0^a x^n dx = \frac{a^{n+1}}{n+1}
+  \]
+  \item Fermat generalized this for all rational exponents (except \( n = -1 \)).
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{15pt8.png} \\
+\textbf{FIG. 15.8:} Fermat’s proto-integral via rectangles.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 9: Tangent to the Cycloid via Composition of Motions (Roberval, c. 1630s)}
+\textbf{Statement.} Construct the tangent to a cycloid using physical motion. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Let point \( P \) on a rolling circle trace the cycloid.
+  \item Decompose motion into translation \( PS \) and rotation \( PR \).
+  \item Bisect the angle between these vectors to obtain the tangent direction \( PT \).
+  \item Roberval's method interpreted tangents kinematically — motion over form.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt9.png} \\
+\textbf{FIG. 15.9:} Tangent via vector decomposition.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 10: Harmonic Configurations on a Conic (Desargues, c. 1639)}
+\textbf{Statement.} Relate poles and diagonals using projective geometry. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Construct quadrangle \( ABCD \) inscribed in a conic.
+  \item Determine diagonal points \( E, F, G \) from intersections of opposite sides.
+  \item The line through any two diagonal points is the polar of the third.
+  \item This reveals harmonic and duality relationships central to early projective theory.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt10.png} \\
+\textbf{FIG. 15.10:} Desargues’ pole-polar projective theorem.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 11: Pascal’s Mystic Hexagon (c. 1640)}
+\textbf{Statement.} Demonstrate that opposite sides of a hexagon inscribed in a conic intersect in collinear points. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Let \( A, B, C, D, E, F \) be points on a conic.
+  \item Extend sides \( AB \) and \( DE \), \( BC \) and \( EF \), \( CD \) and \( FA \) to form points \( P, Q, R \).
+  \item Pascal’s Theorem states: points \( P, Q, R \) lie on a single straight line.
+  \item This was one of the earliest and most powerful results of projective geometry.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt11.png} \\
+\textbf{FIG. 15.11:} Pascal’s Hexagon Theorem — collinearity from conics.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 12: Recursive Harmony in Pascal’s Triangle (c. 1654)}
+\textbf{Statement.} Reveal hidden proportionality laws within Pascal’s arithmetic triangle. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Arrange integers in a triangle where each entry is the sum of the two above it.
+  \item Observe that for any base diagonal, the ratio of adjacent entries relates to their vertical positions.
+  \item These patterns reflect the binomial coefficients and guided Pascal’s probability work.
+  \item The triangle encodes combinatorial symmetry and recursive structure.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt12.png} \\
+\textbf{FIG. 15.12:} Pascal’s Triangle and its proportional diagonals.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 13: First Steps into Solid Analytic Geometry (Lahire, c. 1679)}
+\textbf{Statement.} Construct a surface defined by a three-variable equation from geometric configuration. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Set up a coordinate system with axis \( OB \) and plane \( OBA \).
+  \item Let point \( P \) lie such that perpendicular \( PB \) exceeds \( OB \) by fixed distance \( a \).
+  \item The locus of such points satisfies:
+  \[
+    a^2 + 2ax + x^2 = y^2 + v^2
+  \]
+  \item This is the equation of a cone in three dimensions — an early instance of surface plotting.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt13.png} \\
+\textbf{FIG. 15.13:} Lahire’s early cone via three-coordinate geometry.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 14: Cycloidal Oscillation and Isochronism (Huygens, c. 1673)}
+\textbf{Statement.} Design a pendulum path with equal-time oscillations for all amplitudes. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Suspend a pendulum from point \( P \) between two inverted cycloidal cheeks \( PQ \) and \( PR \).
+  \item Let the bob swing along arc \( QSR \), itself a cycloid identical in shape to the cheeks.
+  \item The result: the pendulum’s period is independent of amplitude — it is a tautochrone.
+  \item Huygens used this to improve clock precision via geometric constraint.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt14.png} \\
+\textbf{FIG. 15.14:} Huygens’ cycloidal pendulum — the tautochrone.
+\end{center}
+
+\newpage
+
+\subsection*{Problem 15: Radius of Curvature and the Evolute (Huygens, c. 1673)}
+\textbf{Statement.} Determine the center of curvature at a point on a curve using normals. \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Take a smooth curve \( c_i \) and two nearby points \( P \) and \( Q \).
+  \item Construct normals at each point; let them intersect at \( I \).
+  \item As \( Q \to P \), the point \( I \to O \), the center of curvature.
+  \item The path traced by \( O \) as \( P \) moves is the evolute \( c_e \) — the envelope of normals.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{15pt15.png} \\
+\textbf{FIG. 15.15:} Evolute as locus of curvature centers.
+\end{center}
+
+\newpage
+
+\section*{VI. Decline and Disruption}
+
+The breakthroughs of the seventeenth century were immense, but they were not seamless. The thinkers of this era approached the infinite with daring and ingenuity — yet lacked the rigor to seal their claims beyond doubt. Behind the advances in tangents, quadrature, and coordinates, unresolved tensions accumulated.
+
+\subsection*{1. Lack of Formal Limit Theory}
+\begin{itemize}
+  \item Fermat, Pascal, and Torricelli relied on intuitive reasoning involving infinitesimals.
+  \item No clear concept of convergence, epsilon-delta rigor, or error bounds existed.
+  \item Critics began to question whether such reasoning was sound or merely symbolic sleight of hand.
+\end{itemize}
+
+\subsection*{2. Infinitesimals Under Attack}
+\begin{itemize}
+  \item Indivisibles were seen by some as metaphysical absurdities.
+  \item Jesuit mathematicians resisted Cavalieri’s methods as violating Aristotelian continuity.
+  \item The Church’s philosophical orthodoxy clashed with atomic or infinitesimal geometry.
+\end{itemize}
+
+\subsection*{3. Algebraic Elitism}
+\begin{itemize}
+  \item Descartes dismissed mechanical or non-algebraic curves as “inexact.”
+  \item His analytic geometry excluded spirals, cycloids, and transcendental forms.
+  \item This sidelined some of the most fruitful geometrical discoveries of the era.
+\end{itemize}
+
+\subsection*{4. Fragmentation of Techniques}
+\begin{itemize}
+  \item Torricelli, Fermat, Roberval, and Pascal all developed methods in parallel, with little synthesis.
+  \item No unified notation, method, or discipline of “calculus” yet existed.
+  \item Concepts like tangents, areas, and curvature lacked shared language — a tower of Babel before Newton and Leibniz.
+\end{itemize}
+
+\subsection*{5. Clockmakers Without Clocks}
+\begin{itemize}
+  \item Huygens’ cycloidal pendulum and isochronous motion offered profound implications for mechanics and timekeeping.
+  \item Yet, without a fully developed physics of force, inertia, or energy, the full framework for motion remained incomplete.
+  \item The tools were forged — but the system they implied was still in waiting.
+\end{itemize}
+
+\subsection*{Historical Sidebar: The Cannibalism of the de Witts (1672)}
+
+\textit{“Anno 1672 was het rampjaar: het volk was redeloos, de regering radeloos, en het land reddeloos.”}\\
+
+In August of 1672 — the Dutch \textit{Rampjaar} or “Year of Disaster” — a mob in The Hague lynched and mutilated Johan de Witt, Grand Pensionary of Holland, along with his brother Cornelis. Blamed for weakening Dutch defenses and accused of plotting against the House of Orange, they were ambushed, hacked to death, and — as multiple eyewitnesses reported — their bodies were cannibalized in public.\\
+
+The event marked the symbolic collapse of the Cartesian republican elite. De Witt had supported the mathematical and philosophical circles of van Schooten, Hudde, and other Dutch Cartesians. Their secular, rationalist orientation was tied to a political regime now annihilated by populist violence.\\
+
+\begin{quote}
+\textbf{Legacy:} The mob consumed the body of a mathematician’s patron. The Dutch Golden Age turned in on itself.
+\end{quote}
+
+
+\newpage
+
+\section*{VII. Closing Dialectic}
+
+The seventeenth century was not the age of calculus — it was the age that made calculus inevitable.\\
+
+Cavalieri’s indivisibles challenged the exhaustion method, asking whether a line could be a sum of points, a surface a sum of lines. Descartes refused to engage non-algebraic curves, declaring the mechanical “inexact.” Pascal balanced conics with cycloids; Fermat whispered derivatives without limits. They had no epsilon, no delta, no completeness axiom — only will, intuition, and symbol.\\
+
+And yet, their tools worked.\\
+
+What the ancients had forbidden — the use of the infinite — these thinkers touched and wielded with impunity. Where the Greeks sought certainty through abstention, these moderns pursued power through approximation. And in their paradoxes, they laid both the foundation and the fault lines of modern mathematics.\\
+
+\textbf{The dialectic remains:}\\
+
+\begin{quote}
+Can one use the infinite without incoherence? \\
+Can intuition build a system before justification arrives? \\
+Can geometry survive when its curves outgrow construction?
+\end{quote}
+
+These were not merely technical questions. They were philosophical thresholds — and it would take Newton, Leibniz, and a century of reckoning to cross them.
+
+
+
+
+\end{document}
