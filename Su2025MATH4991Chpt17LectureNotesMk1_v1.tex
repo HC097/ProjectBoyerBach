@@ -1,0 +1,206 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 17 – Euler} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\section*{I. Cultural Invocation}
+\begin{itemize}
+  \item \textbf{Civilization:} Enlightenment Europe, shaped by faith and reason
+  \item \textbf{Time Period:} c. 1725--1783
+  \item \textbf{Epochs:} Rise of Academies, Eulerian Synthesis, Post-Reformation Thought
+  \item \textbf{Figures:} Leonhard Euler, Jean Bernoulli, Daniel Bernoulli, d'Alembert, Lambert
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=.1]{c. Leonhard_Euler_-_Jakob_Emanuel_Handmann_(Kunstmuseum_Basel).jpg}
+\end{center}
+
+\vspace{1em}
+
+Euler’s mathematics did not emerge from abstraction alone — it was the child of devotion. Raised in a Reformed Swiss tradition, Euler believed that creation bore structure because its Maker was rational. To study mathematics was not to escape faith but to participate in it — to trace the lines that Providence had already drawn.
+\vspace{1em}
+\noindent
+Where others dissected infinity with skepticism, Euler approached it with reverence. The convergence of series, the symmetry of functions, the elegance of number — these were, to him, echoes of divine design. His symbols were acts of trust. His proofs, acts of praise.
+\vspace{1em}
+\noindent
+In an age that often pitted faith against reason, Euler embodied their union. His analysis was not reactionary nor rebellious — it was faith rendered exact. He believed not only in numbers, but in their source.
+
+\newpage
+
+\section*{II. Big Pictures}
+
+\vspace{1em}
+
+\begin{center}
+    \includegraphics[scale=.15]{a. Old_Confederacy_18th_centur.png}
+    \vspace{1em}
+    \includegraphics[scale=.3]{b. Map_Languages_CH.png}
+\end{center}
+
+\newpage
+
+\section*{II. The Life of Euler}
+Leonhard Euler was born in Basel, Switzerland, on April 15, 1707, into a Calvinist household shaped by Reformation values. His father, Paul Euler, was a Protestant pastor who intended Leonhard for the ministry. The young Euler absorbed rigorous theological and philosophical training before being allowed to study mathematics at the University of Basel at age 13, under the family’s close friend Johann Bernoulli.
+
+\begin{itemize}
+  \item \textbf{1723–1727:} Studies at University of Basel; immersed in Latin, theology, and Cartesian mechanics. Bernoulli secretly guides Euler’s mathematical development.
+  \item \textbf{1727:} Invited to the St. Petersburg Academy of Sciences in Russia, initially to work in medicine and physiology.
+  \item \textbf{1730–1733:} Euler publishes early works on mechanics and becomes professor of physics. In 1733, after Daniel Bernoulli departs, Euler assumes his chair in mathematics.
+  \item \textbf{1735:} Euler suffers a fever and overwork, losing vision in his right eye. That same year, he solves the Basel problem and publishes results on infinite series.
+  \item \textbf{1736:} Publishes \textit{Mechanica}, reformulating Newtonian mechanics in analytic form.
+  \item \textbf{1738–1740:} Develops the foundations of differential equations and publishes on naval architecture and optics.
+  \item \textbf{1741:} Euler accepts an invitation to the Berlin Academy from Frederick the Great. He spends 25 years in Prussia and produces his most famous educational texts.
+  \item \textbf{1748:} Releases \textit{Introductio in Analysin Infinitorum}, defining modern function theory and transcendental analysis.
+  \item \textbf{1755:} Publishes \textit{Institutiones Calculi Differentialis}, followed by \textit{Institutiones Calculi Integralis} (1768–1770).
+\end{itemize}
+
+\noindent
+Though increasingly blind, Euler continued working through dictation. His home life remained vibrant: he married Katharina Gsell and fathered 13 children (only 5 survived to adulthood). By the early 1760s, total blindness in both eyes set in. Yet his productivity increased, due to an extraordinary memory and mental calculation ability.
+
+\vspace{1em}
+
+\noindent
+Euler returned to St. Petersburg in 1766 and remained there until his death. On September 18, 1783, after spending the morning discussing planetary motion and playing with a grandchild, he collapsed from a stroke while drink
+
+\newpage
+
+\section*{IV. Foundational Contributions}
+\subsection*{1. Notation and Symbolism}
+\begin{itemize}
+  \item Introduced and standardized: $e$, $i$, $\pi$, $f(x)$, $\Sigma$, $\gamma$.
+  \item Euler's identity: $e^{\pi i} + 1 = 0$ --- unites the five most fundamental constants.
+  \item Unified exponential and trigonometric functions through complex exponentials.
+\end{itemize}
+
+\subsection*{2. Infinite Series and Products}
+\begin{itemize}
+  \item Summed $\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$ using sine expansions.
+  \item Developed manipulations of divergent series (with caution).
+  \item Introduced beta and gamma functions: $\Gamma(n)$ and $B(m,n)$.
+\end{itemize}
+
+\subsection*{3. Differential Equations}
+\begin{itemize}
+  \item Authored \textit{Institutiones Calculi Differentialis} and \textit{Integralis}.
+  \item Formalized solving techniques: integrating factors, linear systems, Riccati transformations.
+  \item Partial differential equations and method of characteristics.
+\end{itemize}
+
+\subsection*{4. Foundations of Analysis}
+\begin{itemize}
+  \item Defined function analytically; moved away from geometric interpretation.
+  \item Infinite processes as the heart of analysis: continuity, convergence, series.
+  \item Built a formal system around transcendental functions.
+\end{itemize}
+
+\subsection*{5. Geometry and Coordinate Systems}
+\begin{itemize}
+  \item Codified 3D coordinate geometry: cones, cylinders, surfaces of revolution.
+  \item Canonical forms for quadrics via axis rotation: ellipsoids, hyperboloids, paraboloids.
+  \item Popularized polar and parametric forms; foundational to solid analytic geometry.
+\end{itemize}
+
+\subsection*{6. Probability and Number Theory}
+\begin{itemize}
+  \item Developed early actuarial science; worked with annuities, lotteries.
+  \item Proved Fermat's little theorem; introduced $\phi(n)$ function.
+  \item Explored primes, amicable numbers, and series linked to $\ln \ln n$.
+\end{itemize}
+
+\newpage
+
+\section*{VI. Canonical Results — Euler Responds}
+Each of Euler's enduring results emerged not in abstraction, but as a clear answer to a specific mathematical challenge.
+
+\vspace{1em}
+
+\begin{enumerate}
+  \item \textbf{What is the exact sum of the reciprocals of the squares?}\\
+  Mathematicians had failed for decades to resolve this. Euler approached the sine function as an infinite product and solved the Basel problem:
+  \[ \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6} \]
+
+  \item \textbf{What is the true relationship between exponential and trigonometric functions?}\\
+  By interpreting the exponential function with imaginary exponents, Euler unified two worlds:
+  \[ e^{ix} = \cos x + i\sin x \]
+
+  \item \textbf{Can the structure of prime numbers be revealed through series?}\\
+  Euler discovered the connection between the zeta function and primes:
+  \[ \zeta(s) = \prod_{p\ \text{prime}} \frac{1}{1 - p^{-s}} \]
+
+  \item \textbf{How can powers of variables be differentiated without limits?}\\
+  Generalizing Newton’s approach, Euler made the derivative formal and algebraic:
+  \[ \frac{d}{dx}(x^n) = nx^{n-1} \]
+
+  \item \textbf{Can variable coefficient differential equations be solved systematically?}\\
+  Euler devised a class of solvable equations — now bearing his name:
+  \[ x^2y'' + axy' + by = 0 \]
+\end{enumerate}
+
+\newpage
+
+
+\section*{VII. What Euler Built and What Came After}
+
+\subsection*{A Brief Summary}
+
+Euler unified the scattered lands of early calculus into a coherent empire of analysis. He forged the notational language, codified infinite series, structured differential equations, and brought transcendental functions into the fold of rigorous study. His synthesis made it possible to teach, generalize, and expand mathematics across Europe.
+
+\vspace{1em}
+
+
+\subsection*{1. Fault Lines}
+But he also revealed the fault lines that would demand attention:
+\begin{itemize}
+  \item The rigorous definition of limit and continuity still remained vague.
+  \item The foundations of calculus lacked formal epsilon-delta logic.
+  \item Infinite series and functions needed stricter convergence criteria.
+  \item Topology, set theory, and logical foundations were unborn.
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{2. After Euler came the next builders}
+\begin{itemize}
+  \item \textbf{Joseph-Louis Lagrange} formalized mechanics and pushed calculus further into abstraction.
+  \item \textbf{Carl Friedrich Gauss} fused analysis with number theory and geometry.
+  \item \textbf{Augustin-Louis Cauchy} brought rigor to limits and convergence.
+  \item \textbf{Bernhard Riemann} reconceptualized space, integration, and complex analysis.
+  \item \textbf{Karl Weierstrass} gave analysis its final rigorous foundation.
+\end{itemize}
+
+\vspace{1em}
+
+\noindent
+And, there would, of course, be all the mathematicians between and since but, for now, let's close this off in a reflection to the benefit of memory.
+
+\newpage
+
+\section*{VIII. Closing Dialectic}
+Euler did not inherit a system—he built one.
+
+\begin{quote}
+He fused Leibnizian notation with Newtonian rigor. He transmuted conjecture into computation. With every symbol he introduced and every theorem he proved, Euler extended the frontier of reason.
+\end{quote}
+
+\subsection*{1. Euler as European Fusion}
+Born in Switzerland — a nation of converging tongues and subsumed borders — Euler embodied the principle of harmony through structure. Where empires failed to unify cultures, Euler succeeded in mathematics: German discipline, French abstraction, British rigor — all fused into one analytical body.
+
+\subsection*{2. Euler as Reason From Faith}
+Euler’s mind was not secularized. His mathematics flowed from an ordered cosmos. He believed truth had origin — not just pattern. Where Voltaire tore down tradition in the name of reason, Euler used reason to see deeper into tradition’s root. His formulas were not deconstructions, but affirmations — proofs in praise of coherence.
+
+\begin{quote}
+\textit{He was not a man who solved problems. He was the one who gave mathematics its voice.}
+\end{quote}
+
+\end{document}
