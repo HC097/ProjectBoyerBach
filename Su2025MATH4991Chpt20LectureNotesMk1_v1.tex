@@ -1,0 +1,345 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 20 – Geometry} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\section*{I. Cultural Invocation}
+
+\begin{itemize}
+  \item \textbf{Civilization:} From classical antiquity to the post-Riemannian transformation
+  \item \textbf{Time Span:} Euclid (c. 300 BCE) to Clebsch and the Italian School (late 19th century)
+  \item \textbf{Epochal Axes:} Construction, Projection, Curvature, Transformation
+  \item \textbf{Figures:} Euclid, Monge, Poncelet, Chasles, Steiner, Lobachevsky, Riemann, Plücker, Cayley, Klein, Clebsch
+\end{itemize}
+
+Geometry is not just a branch.\\
+
+It is, in many ways, the root.\\
+
+Before analysis. Before symbolic algebra. There was shape.  \\
+
+\noindent
+Before the abstraction of modern mathematics, there was the line, the plane, the figure.
+
+\noindent
+Geometry began with construction. It evolved through projection.  \\
+
+\noindent
+It fractured with the crisis of the parallel postulate.  
+It reassembled itself through curvature, transformation, and algebraic reinterpretation.\\
+
+\noindent
+Each age redefined what it meant to “see” space.
+
+\begin{itemize}
+  \item The Greeks built with compass and reason.
+  \item The French Revolutionaries projected war machines into space.
+  \item The Germans gave it rigor — and bent the plane into manifold.
+  \item The Italians chased beauty across birational surfaces.
+\end{itemize}
+
+\vspace{1em}
+
+\noindent
+Lobachevsky declared: \\
+
+\begin{quote}
+“There is no branch of mathematics, however abstract, which may not some day be applied to phenomena of the real world.”
+\end{quote}
+
+\noindent
+Geometry is that application — not as consequence, but as source. \\
+
+\noindent
+Every reformation of mathematics began with a reformation of space.
+
+\newpage
+
+\section*{II. Big Pictures}
+
+\noindent
+Here we present Geometry as a history of how space is conceived.
+Each generation reinterpreted its contours — sometimes by construction, sometimes by collapse. What began as visible and bounded became abstract, curved, or infinite. The following outline maps the major reconfigurations of geometry from antiquity through the 19th century.
+
+\vspace{1em}
+
+\begin{enumerate}
+  \item \textbf{Classical Geometry (Euclid)}  
+  Geometry as deductive idealism. Constructive, finite, visual, and axiomatic. Truth lives in diagrams and compass-drawn logic.\\
+
+  \item \textbf{Descriptive Geometry (Monge)}  
+  Geometry as projection. Created for military and engineering purposes — turning three dimensions into two for practical design. Visualization becomes operational.\\
+
+  \item \textbf{Projective Geometry (Poncelet, Chasles)}  
+  Geometry as invariance under projection. Points at infinity are restored. Duality becomes a governing principle. Space is transformed by line-of-sight, not distance.\\
+
+  \item \textbf{Synthetic Metric Geometry (Steiner)}  
+  Geometry as pure form. Analytic tools are rejected. Construction with minimal instruments (straightedge and fixed circle). Curves, conics, and inversions revived through classical rigor.\\
+
+  \item \textbf{Non-Metric Projective Geometry (von Staudt)}  
+  Geometry without measurement. Distance is stripped away. Harmonic sets and incidence structures provide the foundation. A pre-metric world from which other geometries can be defined.\\
+
+  \item \textbf{Analytic Geometry (Plücker, Möbius, Cayley)}  
+  Geometry as algebra. Coordinates, equations, duality via algebraic structure. Homogeneous coordinates unify finite and infinite elements. Curves reappear as loci of solutions.\\
+
+  \item \textbf{Non-Euclidean Geometry (Lobachevsky, Bolyai)}  
+  Geometry as divergence. The parallel postulate is discarded. Curved space emerges. Euclidean geometry becomes one possibility among many.\\
+
+  \item \textbf{Riemannian Geometry (Riemann)}  
+  Geometry as manifold. Metric tensors define curvature locally. Space is no longer flat — nor is it necessarily three-dimensional. Geometry is now differential, continuous, and general.\\
+
+  \item \textbf{Transformation Geometry (Klein)}  
+  Geometry as invariance under group action. Each geometry is classified by the transformations it permits. Projective, affine, Euclidean — all become special cases of group symmetry.\\
+
+  \item \textbf{Post-Riemannian Algebraic Geometry (Clebsch)}  
+  Geometry as function and surface. Riemann surfaces, birational maps, moduli spaces. Complex analysis and function theory reenter the geometric scene through classification of curves and invariants.
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent
+Each of these was not a replacement — but a reframing.  
+What counted as a figure, a space, a solution — all changed.  \\
+
+\noindent
+Geometry survived by becoming unrecognizable, and in doing so, became foundational again.
+
+\newpage
+
+\section*{III. Epochal Outline — Geometry Through Iteration}
+
+\noindent
+Geometry evolves.  \\
+Each age asks: “What is space?” \\
+Each answers differently.\\
+
+\noindent
+Below is an outline of how eleven major iterations reframed the field — its language, its tools, and its vision.
+
+\bigskip
+
+\textbf{1. Euclidean Geometry} \hfill \textit{(Euclid)}
+
+\begin{itemize}
+  \item Space is flat, visual, and absolute.
+  \item Built from points, lines, and circles — with straightedge and compass.
+  \item Geometry means constructing what can be drawn.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Descriptive Geometry} \hfill \textit{(Monge)}
+
+\begin{itemize}
+  \item Geometry serves engineering.
+  \item 3D forms are projected onto 2D planes.
+  \item Problems are visualized, unfolded, constructed.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Projective Geometry} \hfill \textit{(Poncelet, Chasles)}
+
+\begin{itemize}
+  \item Vision becomes central: perspective is preserved.
+  \item Points at infinity are included.
+  \item Geometry studies what remains invariant under projection.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Synthetic Metric Geometry} \hfill \textit{(Steiner)}
+
+\begin{itemize}
+  \item Geometry without coordinates.
+  \item Figures are constructed, not computed.
+  \item Distance and angle are reintroduced — but purified.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Non-Metric Projective Geometry} \hfill \textit{(von Staudt)}
+
+\begin{itemize}
+  \item Distance disappears.
+  \item Only incidence matters: which points lie on which lines.
+  \item Geometry begins with harmonic sets, not measurement.
+\end{itemize}
+
+\bigskip
+
+\textbf{6. Analytic Geometry} \hfill \textit{(Plücker, Möbius, Cayley)}
+
+\begin{itemize}
+  \item Geometry becomes algebra.
+  \item Points and lines are equations.
+  \item Curves are loci of solutions; duality emerges through formula.
+\end{itemize}
+
+\bigskip
+
+\textbf{7. Non-Euclidean Geometry} \hfill \textit{(Lobachevsky, Bolyai)}
+
+\begin{itemize}
+  \item The parallel postulate is rejected.
+  \item Space can be curved.
+  \item Geometry becomes logically plural.
+\end{itemize}
+
+\bigskip
+
+\textbf{8. Riemannian Geometry} \hfill \textit{(Riemann)}
+
+\begin{itemize}
+  \item Geometry is defined by the metric.
+  \item Curvature is local, continuous, and intrinsic.
+  \item Manifolds replace flat space.
+\end{itemize}
+
+\bigskip
+
+\textbf{9. Transformation Geometry} \hfill \textit{(Klein)}
+
+\begin{itemize}
+  \item Geometry is what remains unchanged under a group of transformations.
+  \item Each geometry corresponds to a symmetry group.
+  \item Euclidean, affine, and projective are unified under this view.
+\end{itemize}
+
+\bigskip
+
+\textbf{10. Post-Riemannian Algebraic Geometry} \hfill \textit{(Clebsch)}
+
+\begin{itemize}
+  \item Geometry becomes a study of functions on spaces.
+  \item Curves and surfaces are classified by algebraic invariants.
+  \item Riemann surfaces and birational maps shape the field.
+\end{itemize}
+
+
+\newpage
+
+\section*{IV. Iterative Approaches to a Core Problem}
+
+A core question in geometry:
+
+\begin{quote}
+\textbf{Given a curve, what is its nature?}
+\end{quote}
+
+\noindent
+Each school of geometry approached this question differently — not just in technique, but in definition.  
+What counts as “knowing” a curve depends on what you believe geometry is.
+
+\bigskip
+
+\textbf{1. Euclidean Geometry} \hfill \textit{(Euclid)}
+
+\begin{itemize}
+  \item A curve is something constructible with compass and straightedge.
+  \item Its nature is captured by the steps needed to draw it.
+  \item Example: a conic is known by its geometric definition (e.g. ellipse = locus of points with constant sum of distances).
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Descriptive Geometry} \hfill \textit{(Monge)}
+
+\begin{itemize}
+  \item A curve is a 3D object projected into 2D views.
+  \item Its nature lies in reconstruction: what solid it belongs to.
+  \item Solving it means unfolding space into plan and elevation.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Projective Geometry} \hfill \textit{(Poncelet)}
+
+\begin{itemize}
+  \item A curve is part of a system of intersections, tangents, and points at infinity.
+  \item Its nature is captured by invariants — like cross-ratio — that persist under projection.
+  \item It may contain “ideal” or “imaginary” points that ensure completeness.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Analytic Geometry} \hfill \textit{(Plücker, Cayley)}
+
+\begin{itemize}
+  \item A curve is an equation in coordinates.
+  \item Its nature is algebraic: defined by degree, singularities, and symmetries.
+  \item It is studied through its dual: the family of lines tangent to it.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Riemannian and Algebraic Geometry} \hfill \textit{(Riemann, Clebsch)}
+
+\begin{itemize}
+  \item A curve is a manifold — possibly complex, possibly with singularities.
+  \item Its nature is determined by its genus, function field, and moduli.
+  \item To understand it is to classify it among families of curves with shared invariants.
+\end{itemize}
+
+\bigskip
+
+\textit{What began as a figure now becomes a function space.  
+What was once drawn is now abstracted — not erased, but redefined.}
+
+\newpage
+
+\section*{V. Closing Dialectic}
+
+Geometry does not move in a straight line.  
+It folds back on itself. Projects forward. Curves. Inverts. Transforms.\\
+
+\noindent
+From Euclid to Riemann, from compass to manifold, geometry has never stopped asking:  
+
+\begin{quote}
+What is space — and how do we know it?
+\end{quote}
+
+\noindent
+Each iteration did more than expand the field.  
+It redefined what it meant to understand.\\
+
+\begin{itemize}
+  \item Where the Greeks sought form, the 19th century sought function.
+  \item Where projection introduced infinity, curvature reintroduced locality.
+  \item Where coordinates brought control, transformation brought clarity.
+\end{itemize}
+
+\noindent
+Klein’s Erlangen Program did not end the story — it reframed it.  \\
+
+\noindent
+By showing that every geometry is a study of invariants, he closed a circle:\\
+
+\begin{quote}
+From construction → to generality → to structure → to symmetry.
+\end{quote}
+
+\noindent
+But no definition of geometry is final.  
+Each new lens — visual, algebraic, differential, topological — reinterprets the object itself.
+
+The curve. The plane. The surface. The space.
+
+They remain.
+
+But what they are depends on who is asking — and what geometry is being spoken.
+
+
+\end{document}

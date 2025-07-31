@@ -1,0 +1,372 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 22 – Analysis} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\section*{I. Cultural Invocation}
+
+\begin{itemize}
+  \item \textbf{Civilization:} 19th-century Europe — post-Newtonian, post-Eulerian, striving for mathematical rigor amid physical discovery.
+  \item \textbf{Time Span:} Early 1800s to early 1900s
+  \item \textbf{Epochal Axes:} Continuity, Convergence, Integration, Real Number Construction, Function Theory
+  \item \textbf{Figures:} Cauchy, Riemann, Weierstrass, Dedekind, Cantor, Heine, Dirichlet, Bolzano, Hermite, Liouville, Poincaré
+\end{itemize}
+
+\noindent
+Analysis is the mathematics of change —  
+but in the 19th century, it became the mathematics of control.\\
+
+\noindent
+After centuries of intuitive manipulation — Newtonian fluents, Eulerian expansions — cracks appeared.  
+Infinitesimals had no grounding. Convergence was misunderstood. Continuity was presumed.\\
+
+Rigor had to be rebuilt.
+
+\begin{itemize}
+  \item Cauchy redefined limits and derivatives through clarity, not speed.
+  \item Weierstrass formalized $\varepsilon$–$\delta$ language and banished intuition.
+  \item Riemann, from intuition again, created integrals, surfaces, and the zeta function.
+  \item Dedekind cut the rationals to construct the reals.
+  \item Cantor made infinity mathematical — and countability a property.
+\end{itemize}
+
+Each contribution was both surgical and philosophical:\\
+
+\noindent
+- Analysis was not just about solving problems — it was about defining the conditions under which solutions mean anything.\\
+
+\noindent
+- Where algebra built structures, analysis secured the foundations beneath them.\\
+
+It was not a linear refinement.  
+It was a reconstruction — brick by logical brick — of what “real” even means.
+
+\newpage
+
+\section*{II. Big Pictures}
+
+\noindent
+Analysis was not simply extended in the 19th century — it was redefined.\\
+
+\noindent
+Calculus had worked. But its tools were heuristic, its foundations unclear.  \\
+
+\noindent
+The 1800s did not abandon its power — they rebuilt its logic.\\
+
+\noindent
+Here are the major arcs that shaped this reconstruction:
+
+\bigskip
+
+\textbf{1. Cauchy’s Reformation}  
+- Defined limits and continuity with rigor.  
+- Introduced power series and formal convergence.  
+- Founded rigorous function theory and complex analysis.
+
+\bigskip
+
+\textbf{2. Weierstrass and the $\varepsilon$–$\delta$ Revolution}  \\
+
+- Banished infinitesimals from analysis.  \\
+
+- Defined limits, continuity, and differentiability with formal logic.  \\
+
+- Made pathological functions central — continuous nowhere-differentiable examples.
+
+\bigskip
+
+\textbf{3. Riemann’s Intuition}  \\
+
+- Reclaimed intuition with depth: integration, surfaces, analytic continuation.  \\
+
+- Introduced the Riemann integral, Riemann surfaces, and the Riemann zeta function.  \\
+
+- Bridged physics, geometry, and function theory.
+
+\bigskip
+
+\textbf{4. Construction of the Real Numbers}  \\
+
+- Dedekind cuts and Cantor sequences made the real line logically complete. \\
+
+- Méray, Heine, Bolzano contributed to convergence, series, and irrationality.  \\
+
+- Arithmetic replaced geometry as the foundation of analysis.
+
+\bigskip
+
+\textbf{5. Cantor’s Set Theory and Infinity}  \\
+
+- Countability, uncountability, and transfinite numbers.\\
+
+- Function spaces became sets with structure — not just rules.  \\
+
+- Real analysis became inseparable from set theory.
+
+\bigskip
+
+\textbf{6. National Currents} \\
+
+- \textit{Germany}: Rigor, completeness, function theory (Weierstrass, Dirichlet, Dedekind, Cantor).  \\
+
+- \textit{England}: Physics-led analysis (Stokes, Maxwell, Airy).  \\
+
+- \textit{France}: Analytical continuity and transcendence (Cauchy, Hermite, Poincaré).
+
+\bigskip
+
+\noindent
+Together these arcs did more than restore clarity.  
+They redrew what analysis was — and what it was for.
+
+\vspace{1em}
+
+\noindent
+From motion to logic. From curves to completeness.  
+Analysis ceased to describe the world, and began to define its mathematics.
+
+\newpage
+
+\section*{III. Epochal Outline — Analysis Through Iteration}
+
+\noindent
+Analysis matured through confrontation.\\
+
+\noindent
+Each generation found flaws in the last — and redefined what it meant to be correct, convergent, or complete.\\
+
+\noindent
+Here are eight major phases in the transformation of analysis:
+
+\bigskip
+
+\textbf{1. Pre-Rigorous Calculus} \hfill \textit{(Newton, Euler)}
+
+\begin{itemize}
+  \item Derivatives and integrals treated as operations on infinitesimals.
+  \item Formal expansions used freely, often diverging or misapplied.
+  \item Power without precision — results were right, reasoning uncertain.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Cauchyan Function Theory}
+
+\begin{itemize}
+  \item Limits, derivatives, and continuity defined via sequences and convergence.
+  \item The derivative becomes a local property defined by a limit.
+  \item Complex analysis begins in earnest.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Weierstrassian Rigidity}
+
+\begin{itemize}
+  \item Analysis becomes fully formal — $\varepsilon$–$\delta$ definitions rule.
+  \item Continuity, differentiability, and convergence are divorced from intuition.
+  \item Pathological functions (continuous but nowhere differentiable) are accepted, even embraced.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Riemannian Integration and Surfaces}
+
+\begin{itemize}
+  \item Defines integration as a limiting process over partitions.
+  \item Introduces multi-valued functions, surfaces, and analytic continuation.
+  \item Analysis becomes geometric again — but abstractly.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Construction of the Reals} \hfill \textit{(Dedekind, Cantor, Méray)}
+
+\begin{itemize}
+  \item The real number line is constructed from rational data.
+  \item Continuity becomes a property of completeness — not intuition.
+  \item The irrational and transcendental gain rigorous meaning.
+\end{itemize}
+
+\bigskip
+
+\textbf{6. Set Theory Enters} \hfill \textit{(Cantor)}
+
+\begin{itemize}
+  \item Infinite sets are classified: countable vs. uncountable.
+  \item Functions are reconceived as set-theoretic mappings.
+  \item Transfinite numbers extend arithmetic beyond the finite.
+\end{itemize}
+
+\bigskip
+
+\textbf{7. Analysis and Physics} \hfill \textit{(Stokes, Kelvin, Maxwell)}
+
+\begin{itemize}
+  \item Analysis is applied to wave equations, heat, electromagnetism.
+  \item Fourier series, boundary problems, and differential equations take center stage.
+  \item Physical meaning guides the construction of formal tools.
+\end{itemize}
+
+\bigskip
+
+\textbf{8. French Continuity and Transcendence} \hfill \textit{(Hermite, Poincaré)}
+
+\begin{itemize}
+  \item Hermite proves transcendence (e.g. $e$).
+  \item Poincaré explores differential equations and chaos.
+  \item Analysis moves toward dynamical systems and qualitative behavior.
+\end{itemize}
+
+\newpage
+
+\section*{IV. Iterative Approaches to a Core Problem}
+
+A central question in analysis:
+
+\begin{quote}
+\textbf{What does it mean for a function to be continuous?}
+\end{quote}
+
+\noindent
+Each school of analysis answered this differently — and in doing so, revealed new possibilities, new dangers, and new definitions of mathematical truth.
+
+\bigskip
+
+\textbf{1. Pre-Rigorous Intuition} \hfill \textit{(Euler)}
+
+\begin{itemize}
+  \item A function is continuous if it can be drawn without lifting the pen.
+  \item Continuity is a geometric notion — obvious when seen.
+  \item Discontinuities are rare, visible, and usually removable.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Cauchy’s Reformulation}
+
+\begin{itemize}
+  \item A function is continuous if the limit exists and equals the value at the point.
+  \item Formulated using sequences: continuity as limit-preserving.
+  \item Still grounded in geometric intuition — but formalized.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Weierstrass’s $\varepsilon$–$\delta$ Definition}
+
+\begin{itemize}
+  \item Continuity is a local condition defined without reference to motion or graph.
+  \item For every $\varepsilon > 0$, there exists a $\delta > 0$…
+  \item This framework admits strange functions: continuous, nowhere differentiable.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Riemann’s Perspective}
+
+\begin{itemize}
+  \item Continuity is examined in the context of integration and complex analysis.
+  \item Some discontinuous functions are still integrable — the nature of discontinuity matters.
+  \item Continuity becomes one aspect of analytic structure.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Cantor and the Set-Theoretic View}
+
+\begin{itemize}
+  \item Continuity is about the behavior of preimages of open sets.
+  \item Introduces ideas of pointwise vs. uniform convergence.
+  \item Distinguishes between countable and uncountable sets of discontinuities.
+\end{itemize}
+
+\bigskip
+
+\textbf{6. Poincaré and Beyond}
+
+\begin{itemize}
+  \item Continuity is no longer a guarantee of predictability.
+  \item Qualitative behavior — not just limit behavior — becomes central.
+  \item Dynamical systems expose sensitivity within continuous flows.
+\end{itemize}
+
+\bigskip
+
+\textit{From visualization to limit.  
+From limit to formal logic.  
+From logic to abstraction.  
+From abstraction to chaos.}
+
+Continuity survived each shift — but its meaning never stayed fixed.
+
+\newpage
+
+\section*{V. Closing Dialectic}
+
+\noindent
+Analysis is where mathematics learned to doubt itself —  
+and from doubt, to rebuild.\\
+
+\noindent
+It asked questions no longer about values, but about definitions:
+\begin{quote}
+What is a limit?  
+What is a function?  
+What is a number?  
+What is infinity?
+\end{quote}
+
+\vspace{1em}
+
+\noindent
+It took the intuitive tools of calculus —  
+motion, tangent, area — and subjected them to discipline.
+
+\begin{itemize}
+  \item Where Euler calculated, Weierstrass proved.
+  \item Where Newton saw fluxions, Cauchy demanded limits.
+  \item Where geometry once guided, set theory now governed.
+\end{itemize}
+
+\noindent
+The real line became a construction.  
+Continuity became a condition.  
+Infinity became a landscape with coordinates.\\
+
+\noindent
+But with this rigor came abstraction:
+- Functions no longer had graphs.
+- Convergence no longer implied insight.
+- Continuity no longer guaranteed comprehension.
+
+Analysis did not collapse under this weight.  
+It ascended.\\
+
+\noindent
+And in that ascent, it gave modern mathematics its tone:  
+\begin{quote}
+No result without rigor.  
+No structure without definition.  
+No truth without foundation.
+\end{quote}
+
+\noindent
+This was analysis —  
+not the end of intuition,  
+but the beginning of a much greater degree of certainty.
+
+
+\end{document}

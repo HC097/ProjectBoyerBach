@@ -1,0 +1,342 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 24 – Recent Trends} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\subsection*{I. Cultural Invocation}
+
+\begin{itemize}
+  \item \textbf{Civilization}: Globalized Mathematical Modernity
+  \item \textbf{Time Period}: c.\ 1970--Present
+  \item \textbf{Epochs}: Post-Hilbertian Collapse, Computational Ascendancy, Global Diffusion
+  \item \textbf{Figures}: Kenneth Appel, Wolfgang Haken, Daniel Gorenstein, Andrew Wiles, Grigori Perelman, Georges Gonthier, Shing-Tung Yau
+\end{itemize}
+
+The final decades of the twentieth century were not a climax. They were a rupture.
+
+Mathematics became a battlefield of paradox: proofs invisible to humans; groups classified by collective will; a childhood riddle undone by elliptic curves. Geometry, once dethroned, returned---not with compass and straightedge, but with Ricci flow and software verifiers.
+
+What had once required chalk now demanded machines. What had once required insight now required infrastructure.
+
+Yet at the same time, the flame endured. Problems declared too vast to finish were finished. Conjectures mocked for their absurd longevity---Fermat’s, Poincaré’s---fell, not by solitary leaps, but by centuries of accumulated arc.
+
+\medskip
+
+This was the age when:
+\begin{itemize}
+  \item Proof and computation crossed paths---and questioned each other.
+  \item Mathematical legitimacy no longer depended solely on elegance, but on code, consensus, and complexity.
+  \item Nations once peripheral became centers of excellence.
+  \item Formalism met reality---not as theory, but as architecture.
+\end{itemize}
+
+The question was no longer ``Can this be solved?'' \\
+It was: ``Can we agree what solving even means?''
+
+\medskip
+
+This was not the era of axioms. It was the era of \textit{verification}. \\
+Not the age of founding principles, but of \textit{closing epics}.
+
+\medskip
+
+And yet---beneath it all---doubt remained, disciplined. \\
+Mathematics continued not because all was knowable, but because rigor remained sacred.
+
+\newpage
+
+\subsection*{II. Faces of the Era}
+
+\subsubsection*{Concept Note: The Four Color Theorem and Poincaré's Conjecture}
+
+\paragraph{Four Color Theorem}
+\textit{Statement.} Any map drawn on a flat surface (or a sphere), divided into contiguous regions, can be colored using no more than four colors so that no two regions sharing a boundary segment receive the same color.
+
+\medskip
+
+\noindent More precisely: if each region of the map is represented by a ``node,'' and shared borders are represented by ``connections,'' then no more than four colors are ever needed to color all nodes so that connected nodes differ in color.
+
+\medskip
+
+\noindent First proposed by Francis Guthrie in 1852, the problem defied proof for over a century. It was finally resolved in 1976 by \textbf{Kenneth Appel} and \textbf{Wolfgang Haken}, who used a computer to check thousands of possible cases. This was the first major theorem to rely on computer assistance, prompting philosophical debate about what constitutes a ``proof.''
+
+\medskip
+
+\paragraph{Poincaré's Conjecture}
+\textit{Statement.} Every closed, simply connected three-dimensional space without boundary is topologically equivalent to a three-dimensional sphere:
+\[
+\text{If a 3-manifold has no holes and no edges, then it is homeomorphic to } S^3
+\]
+
+\noindent Formulated by Henri Poincaré in 1904, the conjecture resisted proof for nearly a century. In the early 2000s, \textbf{Grigori Perelman} resolved it by applying \textit{Ricci flow with surgery}, a geometric evolution equation. His work also confirmed the broader \textit{Geometrization Conjecture} of William Thurston.
+
+\medskip
+
+\noindent Perelman’s proof was revolutionary not only in method but in delivery: he bypassed journals, refused awards, and questioned the culture of mathematical prestige. The Poincaré conjecture thus closed not only a mathematical epoch—but opened a new ethical one.
+
+
+\paragraph{Kenneth Appel (1932--2013) \& Wolfgang Haken (b.\ 1928)}
+\begin{itemize}
+  \item Co-authors of the first \textit{computer-assisted proof} of the Four-Color Theorem (1976).
+  \item Introduced the method of \textit{reducibility and unavoidability} validated via 1,200 hours of computation.
+  \item Sparked philosophical debate on the nature of proof and machine verification.
+\end{itemize}
+
+\paragraph{Daniel Gorenstein (1923--1992)}
+\begin{itemize}
+  \item Architect and coordinator of the \textit{Classification of Finite Simple Groups (CFSG)}.
+  \item Unified decades of disparate results into a massive, multi-author collaborative framework.
+  \item Brought rigor, editorial control, and structure to one of the most ambitious projects in mathematical history.
+\end{itemize}
+
+\paragraph{Andrew Wiles (b.\ 1953)}
+\begin{itemize}
+  \item Proved \textit{Fermat’s Last Theorem} in 1994 by resolving the modularity of semistable elliptic curves.
+  \item Synthesized the ideas of \textit{modular forms, elliptic curves, and Galois representations}.
+  \item Closed a 350-year arc of mathematical longing with a modern arsenal of algebraic geometry.
+\end{itemize}
+
+\paragraph{Grigori Perelman (b.\ 1966)}
+\begin{itemize}
+  \item Solved the \textit{Poincaré Conjecture} and proved Thurston’s \textit{Geometrization Conjecture} using Ricci flow and entropy techniques.
+  \item Posted three minimalist arXiv papers (2002--2003), bypassing journals and peer review.
+  \item Declined the \textit{Fields Medal} (2006) and \textit{Clay Millennium Prize} (2010), citing moral and communal disillusionment.
+  \item His proof ignited a \textit{credit controversy}, particularly regarding Huai-Dong Cao and Xi-Ping Zhu’s follow-up work.
+  \item \textbf{Shing-Tung Yau} publicly framed the solution in nationalistic terms, drawing criticism and attention in a 2006 \textit{New Yorker} exposé.
+  \item Perelman's withdrawal became a symbol of both \textit{mathematical integrity} and principled estrangement from institutional prestige.
+\end{itemize}
+
+\paragraph{Georges Gonthier (b.\ 1965)}
+\begin{itemize}
+  \item Led the formal verification of the \textit{Four-Color Theorem} using the \textit{Coq proof assistant} (2005).
+  \item Reframed mathematical proof as a \textit{programming discipline}, introducing industrial-level reliability to verification.
+  \item Opened the door to \textit{machine-checked mathematics} as a viable epistemology.
+\end{itemize}
+
+\paragraph{Shing-Tung Yau (b.\ 1949)}
+\begin{itemize}
+  \item Fields Medalist and co-developer of \textit{Calabi--Yau manifolds}, essential to string theory and geometry.
+  \item Prominent contributor to \textit{differential geometry}, \textit{Ricci curvature}, and \textit{geometric analysis}.
+  \item Influential public figure in global mathematics; promoted Chinese mathematical achievement and national presence.
+\end{itemize}
+
+\paragraph{Robin Thomas, Paul Seymour, Neil Robertson, Daniel Sanders}
+\begin{itemize}
+  \item Provided a \textit{simplified and modular computer-assisted proof} of the Four-Color Theorem (1997).
+  \item Reduced configuration cases to 633 and streamlined discharging techniques.
+  \item Affirmed the \textit{feasibility of collaborative, computer-verified large-scale proofs}.
+\end{itemize}
+
+\newpage
+
+\subsection*{III. Works of the Era}
+
+\paragraph{Appel \& Haken – \textit{Every Planar Map is Four Colorable} (1976)}
+\begin{itemize}
+  \item First major \textit{computer-assisted proof} in mathematics.
+  \item Introduced a method to reduce all cases to a finite set of \textit{1,936 configurations}, then showed no counterexample could contain any of them.
+  \item Published in a series of papers and later expanded in their 1989 book-length technical guide.
+  \item Catalyzed debate on the nature of proof and the legitimacy of uncheckable computation.
+\end{itemize}
+
+\paragraph{Robertson, Sanders, Seymour, Thomas – \textit{Simplified Four-Color Proof} (1997)}
+\begin{itemize}
+  \item Reduced the number of configurations to \textit{633} and discharging rules to \textit{32}.
+  \item Improved algorithmic transparency and mitigated criticism of the original Appel--Haken approach.
+  \item Cited concerns about compiler trust and hardware fallibility---raising early questions in \textit{software verification ethics}.
+\end{itemize}
+
+\paragraph{Gonthier \& Werner – \textit{Formal Proof in Coq} (2005)}
+\begin{itemize}
+  \item Verified the four-color theorem using the \textit{Coq proof assistant}.
+  \item Provided not just a proof, but a \textit{machine-verified certificate of correctness}.
+  \item Marked a shift from proof as rhetoric to proof as \textit{code artifact}.
+\end{itemize}
+
+\paragraph{Gorenstein et al. – \textit{Classification of Finite Simple Groups} (1983--2004)}
+\begin{itemize}
+  \item Unified prior work into a \textit{“Periodic Table” of finite simple groups}.
+  \item Final proof spanned \textit{over 10,000 pages}, culminating in the Aschbacher--Smith volumes (2004).
+  \item Noted for its size, collaborative nature, and relative lack of external applications---provoking reflection on \textit{intrinsic value in mathematics}.
+\end{itemize}
+
+\paragraph{Wiles – \textit{Modular Elliptic Curves and Fermat’s Last Theorem} (1995)}
+\begin{itemize}
+  \item Proved the \textit{semistable case of the Taniyama--Shimura--Weil conjecture}, which implied Fermat’s Last Theorem.
+  \item Employed tools from \textit{Iwasawa theory, Hecke algebras, Galois representations}, and \textit{modular forms}.
+  \item Joint supplement with Richard Taylor resolved the critical gap in the original argument.
+\end{itemize}
+
+\paragraph{Perelman – \textit{Ricci Flow and the Geometrization of 3-Manifolds} (2002--2003)}
+\begin{itemize}
+  \item Three papers posted on the arXiv outlined a proof of the \textit{Geometrization Conjecture}, implying the \textit{Poincaré Conjecture}.
+  \item Introduced \textit{entropy formulas}, \textit{surgery techniques}, and refined \textit{Hamilton’s Ricci flow}.
+  \item Verified independently by several groups; Perelman refused publication, prizes, and interviews.
+  \item Changed the discourse on authorship, proof sufficiency, and mathematical ethics.
+\end{itemize}
+
+\newpage
+
+\subsection*{IV. Historical Overview}
+
+\paragraph{The late twentieth and early twenty-first centuries witnessed a decisive transformation in the identity, scale, and method of mathematics.}
+
+\vspace{1em}
+
+What had once been a solo endeavor of chalk and blackboard became a networked enterprise---hybridized with computation, institutionalized into collaborations, and globalized across continents.
+
+\begin{enumerate}
+  \item \textbf{The Rise of Machine-Verified Proofs} \\
+  -- Appel and Haken’s proof of the Four-Color Theorem (1976) marked a historic threshold: the first theorem whose truth exceeded human comprehension in raw detail. \\
+  -- The response was mixed---celebration, discomfort, and the birth of ``proof ethics.'' \\
+  -- Later work by Gonthier, Robertson, and others normalized machine assistance in rigorous verification.
+
+  \item \textbf{Completion of Monumental Projects} \\
+  -- Gorenstein and collaborators completed the \textit{Classification of Finite Simple Groups}---a project spanning decades and involving hundreds of mathematicians. \\
+  -- Its 10{,}000-page sprawl challenged the community’s capacity to verify, understand, or even read its proof in full. \\
+  -- The CFSG posed a deeper question: is a proof still a proof if no single mind can encompass it?
+
+  \item \textbf{Resolution of Ancient Conjectures} \\
+  -- \textit{Fermat’s Last Theorem}, proven by Wiles, did not rely on 17th-century arithmetic, but on 20th-century modularity, elliptic curves, and Galois theory. \\
+  -- \textit{Poincaré’s Conjecture}, resolved by Perelman, leveraged geometric analysis, Ricci flow, and a refusal to participate in traditional academic rewards.
+
+  \item \textbf{A New Role for Computers} \\
+  -- Computers moved from heuristic tool to ontological participant. \\
+  -- Proofs became code. Code became argument. The nature of truth shifted toward \textit{verifiability by machine}. \\
+  -- This created tension: traditional proof as human persuasion versus code as executable verification.
+
+  \item \textbf{Globalization of Mathematical Culture} \\
+  -- Mathematical leadership shifted beyond Western Europe and North America. \\
+  -- Contributions emerged from China, Russia, and elsewhere---facilitated by internet-era collaboration and open access. \\
+  -- The \textit{arXiv}, launched in 1991, became the central node in decentralized knowledge circulation.
+
+  \item \textbf{Erosion of Romantic Individualism} \\
+  -- While figures like Wiles and Perelman embodied the lone genius myth, their work relied on centuries of scaffolding. \\
+  -- Massive projects and formal verification diluted the myth of solitary insight. \\
+  -- Mathematics became less about heroic leaps---and more about distributed rigor.
+
+  \item \textbf{A New Philosophical Uncertainty} \\
+  -- The rise of computer proofs, modular structures, and high-dimensional tools prompted new debates: \\
+  \quad $\circ$ What counts as a ``proof''? \\
+  \quad $\circ$ Who (or what) gets credit? \\
+  \quad $\circ$ Can trust and truth be reconciled in a machine age?
+\end{enumerate}
+
+\newpage
+
+\subsection*{V. Problem--Solution Cycle}
+
+\paragraph{Problem 1: Four-Color Conundrum (1852--1976)}
+\textbf{Statement.} Can every map be colored with no more than four colors so that no two adjacent regions share the same color? \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Francis Guthrie first posed the problem in 1852.
+  \item Appel and Haken (1976) decomposed all possible maps into \textit{1,936 reducible configurations}.
+  \item Using a \textit{computer program}, they verified each case via brute-force logic.
+  \item Philosophical impact: challenged the status of proofs not comprehensible by a single human mind.
+\end{itemize}
+
+\paragraph{Problem 2: Verifying the Verification (2005)}
+\textbf{Statement.} Can a computer-verified proof of the Four-Color Theorem be trusted independently of compiler assumptions and machine errors? \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Georges Gonthier recoded the entire proof in the \textit{Coq proof assistant}.
+  \item Result: a formalized, logic-level derivation certified by foundational axioms.
+  \item Introduced \textit{machine-checkable proofs} as a new epistemological standard.
+  \item Signaled the dawn of \textit{proof as software artifact}.
+\end{itemize}
+
+\paragraph{Problem 3: Completing the Classification (1980s--2004)}
+\textbf{Statement.} Can all finite simple groups be listed and classified? \\
+\textbf{Solution.}
+\begin{itemize}
+  \item The classification required identifying all \textit{non-decomposable group types}.
+  \item Result: a taxonomy of \textit{26 sporadic groups}, \textit{cyclic}, \textit{alternating}, and \textit{Lie-type groups}.
+  \item Final verification spanned 10{,}000+ pages, published across dozens of journals.
+  \item A proof of \textit{industrial scale}, prompting questions about collective authorship and comprehension.
+\end{itemize}
+
+\paragraph{Problem 4: Fermat’s Last Theorem (1637--1994)}
+\textbf{Statement.} Are there whole number solutions to \( x^n + y^n = z^n \) for \( n > 2 \)? \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Andrew Wiles proved that all \textit{semistable elliptic curves} are modular.
+  \item Combined deep tools: \textit{Galois representations}, \textit{modular forms}, and \textit{Hecke algebras}.
+  \item Linked 17th-century arithmetic to 20th-century algebraic geometry.
+  \item The original ``last theorem'' became a corollary to a modern conjecture.
+\end{itemize}
+
+\paragraph{Problem 5: Poincaré’s 3-Manifold Puzzle (1904--2003)}
+\textbf{Statement.} Is every closed, simply connected 3-manifold topologically a 3-sphere? \\
+\textbf{Solution.}
+\begin{itemize}
+  \item Grigori Perelman applied \textit{Hamilton’s Ricci flow} with surgery to collapse curvature singularities.
+  \item Introduced \textit{entropy formulas} and monotonicity methods to guide the flow.
+  \item His minimalist arXiv preprints bypassed peer review but withstood full verification.
+  \item Result: affirmation of the \textit{Geometrization Conjecture} and resolution of Poincaré’s century-old question.
+\end{itemize}
+
+\newpage
+
+\subsection*{VI. Closing Dialectic}
+
+\paragraph{This was not a century of discovery. \\
+It was a century of \textit{convergence}.}
+
+\medskip
+
+Proof and machine became indistinguishable. \\
+
+\noindent
+Rigor no longer lived on chalkboards---it pulsed through servers. \\
+
+\noindent
+Mathematics shed its romantic loneliness and clothed itself in code, collaboration, and controversy.
+
+\medskip
+
+The Four-Color Theorem no longer belonged to vision---it belonged to computation. \\
+
+\noindent
+Fermat’s Last Theorem no longer belonged to arithmetic---it belonged to modularity. \\
+
+\noindent
+The Poincaré Conjecture no longer belonged to topology---it belonged to flow, entropy, and ascetic refusal.
+
+\medskip
+
+This era forced a reckoning:
+
+\begin{itemize}
+  \item What is a proof, if it cannot be read?
+  \item What is credit, if it cannot be assigned?
+  \item What is truth, if it must be compiled?
+\end{itemize}
+
+Mathematics did not answer these questions. \\
+It \textit{endured} them.
+
+\medskip
+
+Perelman, Wiles, Gonthier, and Gorenstein each revealed a facet of what the discipline had become: \\
+A mirror of the world it once stood apart from. \\
+A discipline that no longer claims certainty---but never surrenders rigor.
+
+\medskip
+
+This was not an epilogue to the history of mathematics. \\
+It was its \textbf{reforging}---in silicon, in silence, in solidarity.
+
+
+\end{document}

@@ -1,0 +1,326 @@
+\documentclass[9pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0pt}{}[.]
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Chapter 21 – Algebra} \\
+\large Harley Caham Combest \\
+\large Su2025 MATH4991 Lecture Notes – Mk1
+\end{center}
+
+\vspace{1em}
+
+\section*{I. Cultural Invocation}
+
+\begin{itemize}
+  \item \textbf{Civilization:} Nineteenth-century Europe — Britain, France, Germany — contending with the legacy of Enlightenment precision and Romantic abstraction.
+  \item \textbf{Time Span:} Late 18th century to early 20th century
+  \item \textbf{Epochal Axes:} Symbolism, Structure, Operation, Logic, Generalization
+  \item \textbf{Figures:} Peacock, De Morgan, Boole, Hamilton, Grassmann, Cayley, Sylvester, Dedekind, Kronecker, Frege, Peano
+\end{itemize}
+
+Algebra is the language mathematics speaks to itself.\\
+
+\noindent
+It began as calculation — rules for solving equations.  
+But in the 19th century, it became something else:  
+Not just a tool, but a mirror — dominated by British (and non-trivially Irish) linguists reflecting the deeper logic beneath all operations.\\
+
+\noindent
+What is a number?  \\
+What is a valid operation?  \\
+Can structure exist without content?\\
+
+These were no longer technical questions — they were foundational.\\
+
+\begin{itemize}
+  \item George Peacock asked whether algebra is formal or arithmetical.
+  \item Boole used algebra to encode logic itself.
+  \item Hamilton discovered a new kind of number — where $ij = k$, but $ji = -k$.
+  \item Grassmann defined vectors not from geometry, but from algebraic combination.
+  \item Cayley turned matrices from bookkeeping devices into abstract operators.
+  \item Dedekind asked: what counts as a number system at all?
+  \item Peano formalized the natural numbers into logical axioms — arithmetic made symbolic law.
+\end{itemize}
+
+Algebra became structural.\\
+
+\noindent
+Where arithmetic counted, algebra now classified.  
+Where symbols once represented, they now generated.\\
+
+This was not a refinement. It was a reformation.\\
+
+\newpage
+
+\section*{II. Big Pictures}
+
+Algebra in the 19th century did not merely expand.  
+It changed direction — and then changed form.\\
+
+\noindent
+This was not just the solving of harder equations.  
+It was the invention of entire new kinds of number, operation, and system.\\
+
+\noindent
+Here are the major currents that reshaped the field:
+
+\bigskip
+
+\textbf{1. Symbolic Formalism (Peacock, De Morgan)}
+
+Algebra as manipulation of symbols.  
+Rules are valid not because they reflect numbers, but because they are internally consistent.  
+Algebra begins to detach from arithmetic.
+
+\bigskip
+
+\textbf{2. Logic as Algebra (Boole, Peirce, Frege)}
+
+Algebra becomes a language for logic itself.  
+Statements become equations. Truth becomes symbolically computed.  
+This is not just number applied to thought — it is thought revealed as structure.
+
+\bigskip
+
+\textbf{3. New Number Systems (Hamilton, Grassmann)}
+
+Algebra is no longer bound to the real or complex numbers.  
+Hamilton invents quaternions — non-commutative number systems.  
+Grassmann defines vector spaces without geometry.  
+Numbers multiply — and with them, algebra splits open.
+
+\bigskip
+
+\textbf{4. Algebraic Structures (Cayley, Sylvester)}
+
+Operations are abstracted.  
+Matrices, groups, and linear operators gain lives of their own.  
+Algebra shifts from solving equations to defining transformation.
+
+\bigskip
+
+\textbf{5. Foundations and Axioms (Dedekind, Peano, Frege)}
+
+What is a number?  
+Peano formalizes natural numbers from axioms.  
+Dedekind defines number systems through sets and mappings.  
+Algebra approaches logic — and asks what makes a system coherent.
+
+\bigskip
+
+\textbf{6. The Algebra-Geometry Bridge}
+
+Algebra becomes a language for describing space.  
+The work of Clebsch, Cayley, and others turns geometric intuition into symbolic computation.  
+This sets the foundation for the rise of algebraic geometry in the next century.
+
+\bigskip
+
+Each of these currents moved in parallel — but together they redefined the field.  
+Algebra was no longer just about solving.  
+It was about building: systems, structures, and the languages to describe them.
+
+\newpage
+
+\section*{III. Epochal Outline — Algebra Through Iteration}
+
+Algebra is not a single method.  
+It is a series of redefinitions — each one shifting the boundary of what counts as number, operation, and form.
+
+Here are seven major phases in algebra’s transformation during the 19th century:
+
+\bigskip
+
+\textbf{1. Arithmetical Symbolism} \hfill \textit{(Peacock, De Morgan)}
+
+\begin{itemize}
+  \item Algebra begins as generalized arithmetic.
+  \item Symbols stand for quantities.  
+  \item Equations are solved, but not yet abstracted.
+  \item Laws mirror numerical behavior: commutativity, associativity, distributivity.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Formal Algebra} \hfill \textit{(Peacock, Boole)}
+
+\begin{itemize}
+  \item Symbols need not refer to numbers.
+  \item Operations are defined formally — independent of interpretation.
+  \item Algebra becomes self-referential: a system governed by internal law.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Logic and Algebra Merge} \hfill \textit{(Boole, Peirce, Frege)}
+
+\begin{itemize}
+  \item Algebra expresses logic.
+  \item Statements become equations; operations become inference.
+  \item Frege systematizes propositional logic using algebraic form.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Extension of Number} \hfill \textit{(Hamilton, Grassmann)}
+
+\begin{itemize}
+  \item New number systems arise: complex, quaternions, vectors.
+  \item Algebra becomes a way to invent structure.
+  \item Non-commutativity and non-associativity are explored, not rejected.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Abstract Structure} \hfill \textit{(Cayley, Sylvester)}
+
+\begin{itemize}
+  \item Focus shifts from solving to defining systems.
+  \item Matrices, linear transformations, and groups are treated on their own terms.
+  \item Algebra is now the study of operations and their symmetries.
+\end{itemize}
+
+\bigskip
+
+\textbf{6. Arithmetic Foundations} \hfill \textit{(Dedekind, Peano, Frege)}
+
+\begin{itemize}
+  \item Number itself is redefined.
+  \item Peano axioms define $\mathbb{N}$ from logic.
+  \item Dedekind constructs $\mathbb{Q}$ and $\mathbb{R}$ from set-theoretic mappings.
+  \item Frege attempts a full logicist foundation.
+\end{itemize}
+
+\bigskip
+
+\textbf{7. Algebra Meets Geometry} \hfill \textit{(Clebsch, Cayley)}
+
+\begin{itemize}
+  \item Algebra becomes the language of curves and surfaces.
+  \item Equations define geometric objects; transformations reveal symmetry.
+  \item The boundary between algebra and geometry begins to dissolve.
+\end{itemize}
+
+\newpage
+
+\section*{IV. Iterative Approaches to a Core Problem}
+
+A guiding question in algebra:
+
+\begin{quote}
+\textbf{Given an equation, what does it mean to solve it?}
+\end{quote}
+
+\noindent
+This is not a constant question.  
+Each era of algebra would define “solving” differently — and reshape what the equation even is.
+
+\bigskip
+
+\textbf{1. Arithmetical Algebra} \hfill \textit{(Peacock)}
+
+\begin{itemize}
+  \item An equation is a numerical statement.
+  \item Solving means finding a number that satisfies it.
+  \item The symbols behave like numbers — and must obey their rules.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Formal Symbolic Algebra} \hfill \textit{(De Morgan, Boole)}
+
+\begin{itemize}
+  \item An equation is a formal expression.
+  \item Solving means transforming symbols according to internal rules — not interpretation.
+  \item The solution is structural, not numerical.
+\end{itemize}
+
+\bigskip
+
+\textbf{3. Algebra as Logic} \hfill \textit{(Boole, Frege)}
+
+\begin{itemize}
+  \item An equation encodes a logical relation.
+  \item Solving means checking truth-preserving inference.
+  \item Variables stand for propositions; operations stand for reasoning.
+\end{itemize}
+
+\bigskip
+
+\textbf{4. Algebra as Structure} \hfill \textit{(Hamilton, Cayley)}
+
+\begin{itemize}
+  \item An equation may live in a non-numerical system — like matrices or quaternions.
+  \item Solving means finding elements within a defined structure that satisfy a relation.
+  \item The solution is contextual: it depends on the system’s laws.
+\end{itemize}
+
+\bigskip
+
+\textbf{5. Algebra as Foundation} \hfill \textit{(Dedekind, Peano)}
+
+\begin{itemize}
+  \item The equation is part of an axiomatic system.
+  \item Solving is derivability: what follows from definitions and axioms.
+  \item Algebra becomes a logic of system-building.
+\end{itemize}
+
+\bigskip
+
+\textit{From number to symbol.  
+From computation to transformation.  
+From solving to structuring.}\\
+
+\noindent
+Algebra no longer solves equations.  
+It defines the worlds in which equations exist.
+
+\newpage
+
+\section*{V. Closing Dialectic}
+
+Algebra did not evolve by extension.  
+It evolved by inversion.\\
+
+What began as the art of solving equations  
+became the act of defining what an equation is.\\
+
+\bigskip
+
+The 19th century transformed algebra from a practice to a philosophy:
+\begin{itemize}
+  \item Boole made it logical.
+  \item Hamilton made it spatial.
+  \item Cayley made it operational.
+  \item Dedekind and Peano made it foundational.
+\end{itemize}
+
+What unified these movements was not method — but intent.\\
+
+Algebra ceased to be about answers.  
+It became a theory of what kinds of questions were possible.\\
+
+\bigskip
+
+The core reversal:\\
+\begin{quote}
+Algebra no longer described numbers.  
+It described structures that included numbers as a special case.
+\end{quote}
+
+This was not a collapse.  
+It was a generalization — radical and abstract, but coherent.\\
+
+What followed would not be clarity, but power.  
+The 20th century would inherit this abstraction — and extend it toward rings, fields, categories, modules.\\
+
+But that story begins only after algebra stopped being about quantity —  
+and began being about form.\\
+
+
+\end{document}
